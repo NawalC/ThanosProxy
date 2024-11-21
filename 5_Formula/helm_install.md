@@ -17,7 +17,7 @@ Follow these simple commands to deploy Prometheus and Thanos using Bitnami Helm 
 
 2. **Install Prometheus**
     ```bash
-    helm install prometheus bitnami/prometheus --namespace monitoring --set server.service.type=LoadBalancer --set alertmanager.enabled=false --set pushgateway.enabled=false
+    helm install prometheus bitnami/prometheus --namespace monitoring --set server.service.type=LoadBalancer --set alertmanager.enabled=true --set pushgateway.enabled=true
     ```
 
 3. **Install Thanos**
