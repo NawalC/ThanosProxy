@@ -9,6 +9,11 @@ Follow these simple commands to deploy Prometheus and Thanos using Bitnami Helm 
     helm repo add bitnami https://charts.bitnami.com/bitnami
     helm repo update
     ```
+    **Check if helm is installed**
+    ```bash
+    helm version
+    helm list
+    ```
 
 2. **Install Prometheus**
     ```bash
