@@ -1,0 +1,14 @@
+I wrote 
+
+```
+@NawalC ➜ /workspaces/ThanosProxy (main) $ kubecli
+bash: kubecli: command not found
+@NawalC ➜ /workspaces/ThanosProxy (main) $ kubectl
+kubectl controls the Kubernetes cluster manager.
+```
+kubectl is already enabled
+
+```
+@NawalC ➜ /workspaces/ThanosProxy (main) $ kubectl create namespace monitoring
+namespace/monitoring created
+```

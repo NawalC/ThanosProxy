@@ -3,15 +3,16 @@
 1. 🚀 Start Minikube - ✅ done
 2. 🔍 Check Minikube status - ✅ done
 3. 📦 Install Helm chart - ✅ done
-4. ⚙️ Create configuration for Prometheus - ⏳ in-progress
-5. 🛠️ Create config for Thanos service:
-    - Frontend
-    - Query
-    - Receiver
-6. 🌐 Configure proxy settings
-7. 📏 Setup Ruler and Alert Manager
-8. 📡 Expose remote write Prometheus to Thanos Receiver
-9. 🌐 Ingress Network will use NGINX as proxy
+4. 🏷️ Create a namespace called monitoring - ⏳ in-progress
+5. ⚙️ Create configuration for Prometheus - ⏳ in-progress
+6. 🛠️ Create config for Thanos service:
+    - Frontend - ⏳ in-progress
+    - Query - ⏳ in-progress
+    - Receiver - ⏳ in-progress
+7. 🌐 Configure proxy settings - ⏳ in-progress
+8. 📏 Setup Ruler and Alert Manager - ⏳ in-progress
+9. 📡 Expose remote write Prometheus to Thanos Receiver - ⏳ in-progress
+10. 🌐 Ingress Network will use NGINX as proxy - ⏳ in-progress
 
 We need the frontend, receiver, ruler, and query to communicate via proxy.
 
