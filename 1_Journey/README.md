@@ -15,7 +15,7 @@
 10. 📡 Expose remote write Prometheus to Thanos Receiver - ⏳ In-progress
 11. 🌐 Ingress Network will use NGINX as proxy - ⏳ In-progress
 
-We need the frontend, receiver, ruler, and query to communicate via proxy.
+We need the frontend, receiver, ruler, and query to communicate via proxy to Prometheus.
 
 ;prompts;
 - add or update emojis mention task status
