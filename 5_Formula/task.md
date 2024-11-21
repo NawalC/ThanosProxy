@@ -29,19 +29,45 @@ To set up Helm, Prometheus, and other components, follow the steps below:
     ```
 
 5. **Install Prometheus**
+Depending on your use case, you can install Prometheus with either a NodePort or a LoadBalancer service type.
+
+**Using LoadBalancer:**
+```sh
+helm install prometheus bitnami/prometheus --namespace monitoring \
+  --set server.service.type=LoadBalancer \
+  --set alertmanager.enabled=true \
+  --set pushgateway.enabled=true
+```
+
+**Using NodePort:**
+```sh
+helm install prometheus bitnami/prometheus --namespace monitoring \
+  --set server.service.type=NodePort \
+  --set server.service.nodePort=30000 \
+  --set alertmanager.enabled=true \
+  --set pushgateway.enabled=true
+```
+
+6. **Access Prometheus**
+
+    Depending on the service type you chose, access Prometheus using the appropriate method:
+
+    **For LoadBalancer:**
     ```sh
-    helm install prometheus bitnami/prometheus --namespace monitoring \
-      --set server.service.type=LoadBalancer \
-      --set alertmanager.enabled=true \
-      --set pushgateway.enabled=true
+    kubectl get svc --namespace monitoring -w prometheus-server
     ```
 
-6. **Port-Forward to Prometheus**
+    **For NodePort:**
+    ```sh
+    minikube service prometheus-server --namespace monitoring
+    ```
+
+7. **Port-Forward to Prometheus**
     ```sh
     kubectl port-forward svc/prometheus-server 9090:9090 --namespace monitoring
     ```
 
-7. **Configure Prometheus**
+8. **Configure Prometheus**
 
     Update the Prometheus configuration file `/workspaces/ThanosProxy/5_Formula/prometheus-config.yaml` with the provided content.
 
